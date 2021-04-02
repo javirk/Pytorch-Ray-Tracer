@@ -1,10 +1,14 @@
 from libs.utils import random_on_unit_sphere_like, dot, unit_vector
 from libs.rays import Rays
+import torch
 
 class Material:
     def __init__(self, mat, attenuation):
-        self.albedo = attenuation
         self.material = mat
+        if attenuation.dtype == torch.int64:
+            self.albedo = attenuation / 256.
+        else:
+            self.albedo = attenuation
 
         if self.material == 'lambertian':
             self.scatter = self.scatter_lambertian

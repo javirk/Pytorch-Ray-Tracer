@@ -1,5 +1,5 @@
-image_width: 2000
-aspect_ratio: 16/9
-antialiasing: 10
-render_depth: 4
+image_width: 400
+aspect_ratio: 3/2
+antialiasing: 20
+render_depth: 3
 fov: 90

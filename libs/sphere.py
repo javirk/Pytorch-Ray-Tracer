@@ -22,7 +22,7 @@ class Sphere:
         h1 = (-half_b + sqrtd) / a
 
         # TODO: There should be t_min there. But let's wait for that
-        h = torch.where((h0 > 0) & (h0 < h1), h0, h1)
+        h = torch.where((h0 > 0.1) & (h0 < h1), h0, h1)
         pred = (discriminant > 0) & (h > 0)
         root = torch.where(pred, h, t_max)
         return root

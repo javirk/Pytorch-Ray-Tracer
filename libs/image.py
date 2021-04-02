@@ -33,6 +33,14 @@ class Image:
 
         plt.imshow(data_show.cpu())
 
+    def save(self, output_path, flip=False):
+        data_save = self.flipud() if flip else self.data
+
+        if self.channels_first:
+            data_save = rearrange(data_save, 'c h w -> h w c')
+
+        plt.imsave(output_path, data_save.cpu().numpy())
+
     def flipud(self):
         if self.channels_first:
             data = torch.flip(self.data, [1])
