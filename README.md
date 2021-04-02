@@ -6,6 +6,8 @@ disregarded later. It calculates all rays in parallel.
 
 ![test image](https://github.com/javirk/Pytorch-Ray-Tracer/blob/master/output/test.png?raw=true)
 
+There is something wrong with the shadows, but it's enough for me at the moment. I will try to improve it in the future.
+
 I haven't calculated how much of a speed improvement (if any) one can get using this ray tracer instead of the tutorial's version.
 This is part of a bigger project, so I focused on having a working version and not delving into the details too much.
 Also, dielectric materials are not implemented because they are not necessary for my use case, but their implementation
