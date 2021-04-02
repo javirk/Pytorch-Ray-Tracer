@@ -4,7 +4,7 @@ This is a ray tracer built in PyTorch and based on [Ray Tracing in One Weekend](
 Even if it uses GPU, it is not the most efficient ray tracer, as it computes a vast amount of information that is
 disregarded later. It calculates all rays in parallel.
 
-![test image](https://github.com/javirk/Pytorch-Ray-Tracer/tree/master/output/test.png)
+![test image](https://github.com/javirk/Pytorch-Ray-Tracer/blob/master/output/test.png?raw=true)
 
 I haven't calculated how much of a speed improvement (if any) one can get using this ray tracer instead of the tutorial's version.
 This is part of a bigger project, so I focused on having a working version and not delving into the details too much.
